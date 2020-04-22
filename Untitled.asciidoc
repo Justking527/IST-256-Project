@@ -1,0 +1,44 @@
++*In[12]:*+
+[source, ipython3]
+----
+import requests
+import alpaca_trade_api as tradeapi
+base_url = 'https://paper-api.alpaca.markets'
+api_key = 'PKR5C5N8O71TGGMG3DNZ'
+secret_key = 'A8JAthoN5b1f16nxKx5tJE8QxvC44cz1R6pLCyaQ'
+api = tradeapi.REST(api_key, secret_key, base_url, api_version='v2')
+
+account = api.get_account()
+print(account)
+----
+
+
++*Out[12]:*+
+----
+Account({   'account_blocked': False,
+    'account_number': 'PA2LS812VXF7',
+    'buying_power': '400000',
+    'cash': '100000',
+    'created_at': '2020-04-22T16:50:18.92452Z',
+    'currency': 'USD',
+    'daytrade_count': 0,
+    'daytrading_buying_power': '400000',
+    'equity': '100000',
+    'id': '3bcb9e80-3542-4652-bb5f-524a6f303cc3',
+    'initial_margin': '0',
+    'last_equity': '100000',
+    'last_maintenance_margin': '0',
+    'long_market_value': '0',
+    'maintenance_margin': '0',
+    'multiplier': '4',
+    'pattern_day_trader': False,
+    'portfolio_value': '100000',
+    'regt_buying_power': '200000',
+    'short_market_value': '0',
+    'shorting_enabled': True,
+    'sma': '0',
+    'status': 'ACTIVE',
+    'trade_suspended_by_user': False,
+    'trading_blocked': False,
+    'transfers_blocked': False})
+----
